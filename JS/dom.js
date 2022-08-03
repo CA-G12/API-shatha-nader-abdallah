@@ -122,3 +122,6 @@ xButton.addEventListener('click', function closePopup() {
   popupContainer.style.display = "none";
 })
 
+// Animations 
+
+
