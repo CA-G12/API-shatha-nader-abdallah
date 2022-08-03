@@ -25,7 +25,7 @@ function createEle(ele, className, parent) {
 
 function createCards(data) {
   movieSection.innerHTML = "";
-  data.data.movies.forEach((element) => {
+  data.data.movies.forEach((element, i) => {
     const card = createEle("div", "card", movieSection);
 
     const img = createEle("img", "img-card", card);
@@ -41,7 +41,14 @@ function createCards(data) {
 
     const summaryButt = createEle("button", "button", card);
     summaryButt.textContent = "More";
+
+    summaryButt.addEventListener('click', (e) => {
+      e.preventDefault();
+      popup(element);
+    })
   });
+
+  
 }
 // nader Section
 //! music fetch nader section
@@ -83,4 +90,35 @@ function musicDisply(data) {
     }
   });
 }
+
+/* POPUP JS */
+
+const movieImg = document.querySelector('.movie-img'); 
+const movieTitle = document.querySelector('.movie-title'); 
+const rate = document.querySelector('.rateNum');
+const releaseDate = document.querySelector('.release-actual-date');
+const genreTitles = document.querySelector('.genre-titles');
+const summaryDescription = document.querySelector('.summary-description');
+const watchNowbutton = document.querySelector('.watch-now'); 
+const watchTrailer = document.querySelector('.watch-traielr'); 
+const xButton = document.querySelector('.x')
+const popupContainer = document.querySelector('.popup-container')
+
+function popup(element) {
+    popupContainer.style.display = "block";
+
+    movieImg.src = element.large_cover_image
+    movieTitle.textContent = element.title_english
+    rate.textContent = element.rating
+    releaseDate.textContent = element.year
+    genreTitles.textContent = element['genres'].join(', ')
+    summaryDescription.textContent = element.summary
+
+    watchNowbutton.href = element.url
+    watchTrailer.href = `https://www.youtube.com/watch?v=${element.yt_trailer_code}` 
+}
+
+xButton.addEventListener('click', function closePopup() {
+  popupContainer.style.display = "none";
+})
 
