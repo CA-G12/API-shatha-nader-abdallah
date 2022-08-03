@@ -1,5 +1,5 @@
 //movies api
-const url = "https://yts.mx/api/v2/list_movies.json?limit=32";
+const url = "https://yts.mx/api/v2/list_movies.json?limit=32&page=2";
 //fetch movies api and use create card func as a callback function
 fetch(url, createCards);
 
@@ -11,7 +11,7 @@ let buttSearch = document.querySelector(".butt-search");
 //search for movie
 buttSearch.addEventListener("click", () => {
   fetch(
-    `https://yts.mx/api/v2/list_movies.json?limit=50&query_term=${inputSearch.value}`,
+    `https://yts.mx/api/v2/list_movies.json?limit=32&query_term=${inputSearch.value}`,
     createCards
   );
 });
