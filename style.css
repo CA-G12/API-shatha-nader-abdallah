@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.25s ease-in-out;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -12,6 +13,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    background-color: black;
   }
 
   input, button, a {
@@ -155,7 +157,7 @@
     padding: 10px;
     font-size: 25px;
     color: white;
-    background-color: #f12832;
+    background-color: #bb000e;
     border-radius: 10px;
     transition: all .2s;
     
@@ -176,21 +178,104 @@
     margin-right: 10px;
   }
 
-  .movies {
-    min-height: 100vh;
+
+ /* start movies section style   */
+  .movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .card{
+    margin: 1.5rem;
+    border-radius: 10px;
+    background-color: #ededed;
+    transition: all 0.3s linear;
+    width: 260px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s linear;
+}
+.img-card {
     width: 100%;
-    background-color: #1F1E1F;
+    height: 255px;
+    border-radius: 10px 10px 0px 0px ;
   }
 
-  .music {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #1F1E1F;
+  .p-movie-name{
+    display: inline;
+    font-weight: bold;
   }
 
-  .footer {
-    min-height: 40vh;
-    width: 100%;
-    background-color: #3D3D3D;
-
+  .details{
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 12px;
   }
+  .search-input{
+    margin: 0 auto;
+    margin-top: 2rem;
+    
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-search{
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  .butt-search{
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #BB000E;
+    color: white;
+    cursor: pointer;
+  }
+  .card .button{
+    width: 40%;
+    margin: 0 auto;
+    padding: 4px;
+    border-radius: 8px;
+    border: none;
+    background-color: #bb000e;
+    color: white;
+    cursor: pointer;
+  }
+  .card:hover{
+    box-shadow: 2px 4px 25px  #BB000E;
+    transform: translate3D(0, -9px, 0);
+  }
+
+
+  @media (min-width: 1200px) {
+    .input-search{
+        width: 50%;
+        font-size: 15px;
+    }
+    .search-input{
+        width: 60%;
+        margin-top: 2rem;
+    }
+  }
+
+   /* end movies section style   */
+
+   /* start footer section style   */
+   footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #bb000e;
+    padding: 0.8rem;
+    color: white;
+  }
+ .icons a{
+    text-decoration: none;
+    color: white;
+    padding-left: 6px;
+  }
+
+  /* end footer section style   */
