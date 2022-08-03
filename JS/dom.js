@@ -122,6 +122,9 @@ xButton.addEventListener('click', function closePopup() {
   popupContainer.style.display = "none";
 })
 
-// Animations 
+// Loader 
 
-
+const loader = document.querySelector('.loader-container');
+window.addEventListener('load', function(){
+    loader.style.display = 'none';
+})
