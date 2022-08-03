@@ -71,6 +71,7 @@ function musicDisply(data) {
       imgDiv.src = e.strTrackThumb;
       h2Div.textContent = e.strTrack;
       aDiv.href = e.strMusicVid;
+      aDiv.setAttribute("target", "_blank");
       aDiv.textContent = "See Video";
 
       // append divs to document
