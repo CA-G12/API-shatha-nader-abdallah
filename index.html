@@ -16,12 +16,12 @@
                 <div class="header-logo">Watchflix</div>
                 <ul class="nav-list">
                     <li class="nav-item home-unique"><a href="#" class="nav-links">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-links">Movies</a></li>
-                    <li class="nav-item"><a href="#" class="nav-links">Music</a></li>
-                    <li class="nav-item"><a href="#" class="nav-links">Contact</a></li>
+                    <li class="nav-item"><a href="#movies-sec" class="nav-links">Movies</a></li>
+                    <li class="nav-item"><a href="#hederMusicSection" class="nav-links">Music</a></li>
+                    <li class="nav-item"><a href="#footer" class="nav-links">Contact</a></li>
                 </ul>
                 <div class="user-details">
-                    <div class="nav-item"><a href="#" class="nav-links"><i class="fa-solid fa-magnifying-glass search-unique"></a></i></div>
+                    <div class="nav-item"><a href="#movies-sec" class="nav-links"><i class="fa-solid fa-magnifying-glass search-unique"></a></i></div>
                     <div class="user-img"></div>
                     <div class="user-name">John Kioski</div>
                 </div>
@@ -37,7 +37,7 @@
         
     </header>
 
-    <section class="search-input">
+    <section class="search-input" id="movies-sec">
         <input
           class="input-search"
           type="text"
@@ -45,7 +45,7 @@
         />
         <button class="butt-search">Search</button>
       </section>
-      <section class="movies" id="movies-sec">
+      <section class="movies">
         <!-- <div class="card">
             <img src="https://img.yts.mx/assets/images/movies/minions_the_rise_of_gru_2022/medium-cover.jpg"/>
             <div class="details">
@@ -64,7 +64,7 @@
     </div>"
     <section class="music" id="musicSection"></section>
       <br>
-    <footer>
+    <footer id="footer">
         <p>Movies & Musics</p>
         <div class="icons">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -72,7 +72,43 @@
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </footer>
+
+      <div class="popup-container">
+        <div class="popup">
+            <div class="contents">
+                <img src="https://img.yts.mx/assets/images/movies/mutant_blast_2018/large-cover.jpg" alt="movie img" class="movie-img">
+                <h1 class="movie-title">Mutant Blast</h1>
+                <div class="rate"><i class="fa-solid fa-star"></i> <span class="rateNum">6.8</span> (IMDB) </div>
+                <hr class="hr"> 
+                <div class="one-liner">
+                    <div class="release-date">
+                        <div class="titles release-title">Release Date</div>
+                        <div class="release-actual-date">2020</div>
+                    </div>
+                    <div class="genre"> 
+                        <div class="titles genre-title">Genre</div>
+                        <div class="genre-titles">Action, Sci-Fi</div>
+                    </div>
+        
+                </div>
+                <hr class="hr"> 
     
+                <div class="summary">
+                    <h2 class="summary-title">Summary</h2>
+                    <p class="summary-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quas minus veniam soluta. Natus aliquam ad, dicta corrupti necessitatibus possimus ab! Rerum officia nam explicabo dolor quia illo doloribus quasi.</p>
+                </div>
+    
+                <div class="watch-buttons">
+                    <a href="#" class="btn watch-now" target="_blank">Watch Now</a>
+                    <a href="#" class="btn watch-traielr" target="_blank">Watch Trailer</a>
+                </div>
+    
+            </div>
+            <div class="x">×</div>
+        </div>
+        
+      </div>
+
     <script src="./JS/fetch.js"></script>
     <script src="./JS/dom.js"></script>
 </body>
