@@ -43,3 +43,43 @@ function createCards(data) {
     summaryButt.textContent = "More";
   });
 }
+// nader Section
+//! music fetch nader section
+let musicSection = document.querySelector("#musicSection");
+
+fetch("https://theaudiodb.com/api/v1/json/2/mvid.php?i=112024", musicDisply);
+
+function musicDisply(data) {
+  //   console.log(data.mvids);
+  data.mvids.forEach((e) => {
+    if (e.strTrackThumb != null) {
+      //   console.log(e.strTrackThumb);
+      // create elements Dom
+      let musicDiv = document.createElement("div");
+      let imgDiv = document.createElement("img");
+      let divForText = document.createElement("div");
+      let h2Div = document.createElement("h2");
+      let aDiv = document.createElement("a");
+
+      // add class names
+      musicDiv.className = "imgDivAll";
+      divForText.className = "overlay";
+      imgDiv.className = "imgDiv";
+      h2Div.className = "h2Name";
+
+      // append the data
+      imgDiv.src = e.strTrackThumb;
+      h2Div.textContent = e.strTrack;
+      aDiv.href = e.strMusicVid;
+      aDiv.textContent = "See Video";
+
+      // append divs to document
+      musicDiv.appendChild(imgDiv);
+      divForText.appendChild(h2Div);
+      divForText.appendChild(aDiv);
+      musicDiv.appendChild(divForText);
+      musicSection.appendChild(musicDiv);
+    }
+  });
+}
+
